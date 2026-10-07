@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ALS Proteomic Score · Protein panel research tool</title>
+  <meta name="description" content="Browser-local ALS protein panel research scoring. SomaScan, Olink and five-protein serum mass-spectrometry scoring with local computation.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f58cf'/%3E%3Cpath d='M7 24L15 7h3l7 17h-4l-2-5h-8l-2 5zm6-9h5l-2-5z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="#calculator"><span class="brand-mark">A</span><span>ALS <span class="brand-light">Proteomic Score</span></span></a><nav aria-label="Main"><a href="#calculator" id="navCalc"></a><a href="#methods" id="navMethods"></a><button id="language" class="language" type="button">中文</button></nav></header>
+  <main>
+    <section id="calculator">
+      <div class="page-heading"><div><p class="eyebrow">PROTEIN PANEL · RESEARCH TOOL</p><h1 id="pageTitle"></h1></div><p class="local-label" id="localLabel"></p></div>
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="inputTitle">
+          <div class="panel-heading"><h2 id="inputTitle"></h2><span class="counter" id="counter">0 / 20</span></div>
+          <div class="setup"><label><span id="platformLabel"></span><select id="platform"><option value="somascan">SomaScan · 20 proteins</option><option value="olink">Olink · 13 proteins</option><option value="serum">Serum MS · 5 proteins</option></select></label><label><span id="referenceLabel"></span><select id="reference"></select></label></div>
+          <p id="compatibility" class="small-note"></p>
+          <div class="mode-tabs" role="tablist"><button id="singleTab" role="tab" aria-selected="true" aria-controls="singlePane"></button><button id="batchTab" role="tab" aria-selected="false" aria-controls="batchPane" hidden></button></div>
+          <section id="singlePane" role="tabpanel"><form id="singleForm" novalidate><div class="form-actions"><p id="inputHelp"></p><button id="calculate" class="primary" type="submit" disabled></button></div><div id="proteinGrid" class="protein-grid"></div><div class="bottom-actions"><button id="clear" type="button" class="text-button"></button><span id="modelVersion" class="model-version"></span></div></form></section>
+          <section id="batchPane" role="tabpanel" hidden></section>
+          <p id="inputError" role="alert" class="error" hidden></p>
+        </section>
+        <aside class="result-column"><section class="panel result-panel" aria-labelledby="resultTitle"><div class="panel-heading"><h2 id="resultTitle"></h2><span class="tag" id="researchTag"></span></div><div id="resultContent" aria-live="polite"></div></section><p class="disclaimer" id="disclaimer"></p></aside>
+      </div>
+    </section>
+    <section id="methods" class="methods" hidden></section>
+  </main>
+  <footer><span>ALS Proteomic Score</span><span id="footerText"></span></footer>
+</body>
+</html>

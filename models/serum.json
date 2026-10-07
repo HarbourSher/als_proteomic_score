@@ -1,0 +1,63 @@
+{
+  "platform": "serum",
+  "version": "serum-signature5-sahzu-reference-20261007-v1",
+  "referenceId": "sahzu-serum-dia-raw-intensity-v1",
+  "inputScale": "positive raw unimputed DIA intensity; log2 without pseudocount",
+  "threshold": null,
+  "intercept": -0.149495967314364,
+  "slope": 3.01466393198614,
+  "reference": "Frozen SAHZU disease-control log2 mean/SD; cohort-specific, not new-batch calibration",
+  "scoreMeaning": "Research index, not absolute ALS probability; no diagnostic threshold",
+  "proteins": [
+    {
+      "gene": "CKM",
+      "uniprot": "P06732",
+      "name": "CKM",
+      "center": 15.51097677204,
+      "scale": 1.05642376475181,
+      "direction": 1,
+      "weight": 0.2,
+      "referenceN": 64
+    },
+    {
+      "gene": "ANTXR2",
+      "uniprot": "P58335",
+      "name": "ANTXR2",
+      "center": 15.6349246751563,
+      "scale": 0.54523393857361,
+      "direction": -1,
+      "weight": 0.2,
+      "referenceN": 64
+    },
+    {
+      "gene": "COMP",
+      "uniprot": "P49747",
+      "name": "COMP",
+      "center": 14.5188811064486,
+      "scale": 0.518155255542551,
+      "direction": -1,
+      "weight": 0.2,
+      "referenceN": 64
+    },
+    {
+      "gene": "CHAD",
+      "uniprot": "O15335",
+      "name": "CHAD",
+      "center": 19.1196907123714,
+      "scale": 0.519687996333681,
+      "direction": -1,
+      "weight": 0.2,
+      "referenceN": 64
+    },
+    {
+      "gene": "SFRP4",
+      "uniprot": "Q6FHJ7",
+      "name": "SFRP4",
+      "center": 15.103673185951,
+      "scale": 0.611053544209458,
+      "direction": 1,
+      "weight": 0.2,
+      "referenceN": 63
+    }
+  ]
+}
